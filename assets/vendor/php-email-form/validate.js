@@ -59,16 +59,16 @@
       if( response.ok ) {
         return response.text()
       } else {
-        throw new Error(`Oops! There was a problem submitting your form`); 
+        throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.includes("true")) {
+      if (data.trim() == 'OK') {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
-        throw new Error(`Oops! There was a problem submitting your form`); 
+        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
       }
     })
     .catch((error) => {
