@@ -62,9 +62,14 @@
         throw new Error(`${response.status} ${response.statusText} ${response.url}`); 
       }
     })
+    fetch(action, {
+      method: 'POST',
+      body: formData,
+      headers: {'Accept': 'application/json'}
+    })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
-      if (data.trim() == 'OK') {
+      if (data.includes("ok")) {
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
