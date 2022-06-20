@@ -57,23 +57,18 @@
     })
     .then(response => {
       if( response.ok ) {
-        thisForm.querySelector('.sent-message').classList.add('d-block');
-        thisForm.reset();
+        return response.text()
       } else {
-        throw new Error(`${response.status} ${response.statusText} ${response.url}`);
-        response.json().then(data => {
-            if (Object.hasOwn(data, 'errors')) {
-              throw new Error(`data["errors"].map(error => error["message"]).join(", ")`);
-            } else {
-              throw new Error(`"Oops! There was a problem submitting your form"`);
-            }
-          })
+        throw new Error(`Oops! There was a problem submitting your form`); 
       }
     })
     .then(data => {
       thisForm.querySelector('.loading').classList.remove('d-block');
+      if (data.includes("true")) {
+        thisForm.querySelector('.sent-message').classList.add('d-block');
+        thisForm.reset(); 
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        throw new Error(`Oops! There was a problem submitting your form`); 
       }
     })
     .catch((error) => {
