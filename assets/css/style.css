@@ -239,39 +239,6 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-.sub_title{
-	margin-top: 15px;
-	
-}
-.sub_title span {
-	position: relative;
-    font-weight: 400;
-    color: #45505b;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin: 0 10px;
-
-	
-}
-.sub_title span:after {
-    position: absolute;
-    content: "";
-    top: 10px;
-    bottom: 0;
-    right: -12px;
-    width: 4px;
-    height: 4px;
-    background: #666;
-    border-radius: 50%;
-}
-.sub_title span:last-child:after {
-    display: none;
-}
-
-.sub_title span:first-child {
-    margin: 0 10px 0 0;
-}
-
 
 #hero {
   width: 100%;
@@ -325,6 +292,39 @@ h1, h2, h3, h4, h5, h6 {
 #hero .social-links a:hover {
   color: #0563bb;
 }
+
+#hero .sub_title{
+	margin-top: 15px;
+}
+#hero .sub_title span {
+	position: relative;
+    font-weight: 400;
+    color: #45505b;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0 10px;
+	white-space:nowrap;
+}
+#hero .sub_title span:after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    bottom: 0;
+    right: -12px;
+    width: 4px;
+    height: 4px;
+    background: #666;
+    border-radius: 50%;
+	margin-left: 12px;
+}
+#hero .sub_title span:last-child:after {
+    display: none;
+}
+
+#hero .sub_title span:first-child {
+    margin: 0 10px 0 0;
+}
+
 @media (max-width: 992px) {
   #hero {
     text-align: center;
