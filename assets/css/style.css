@@ -453,6 +453,10 @@ section {
 .about .content p:last-child {
   margin-bottom: 0;
 }
+.about .content .row{
+	margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 
 /*--------------------------------------------------------------
 # Facts
