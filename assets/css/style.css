@@ -30,6 +30,7 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -360,6 +361,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 20px;
     line-height: 24px;
   }
+  
 }
 
 /* Start Scroll-mouse */
@@ -477,7 +479,7 @@ section {
 }
 .about .content .row{
 	margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 /*--------------------------------------------------------------
@@ -959,6 +961,35 @@ Skills_2
 }
 .services .iconbox-teal:hover .icon path {
   fill: #11dbcf;
+}
+
+/*--------------------------------------------------------------
+# Services About
+--------------------------------------------------------------*/
+.services .content ul {
+  list-style: none;
+  padding: 0;
+}
+.services .content ul li {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.services .content ul strong {
+  margin-right: 10px;
+}
+.services .content ul i {
+  font-size: 16px;
+  margin-right: 5px;
+  color: #0563bb;
+  line-height: 0;
+}
+.services .content p:last-child {
+  margin-bottom: 0;
+}
+.services .content .row{
+	margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 /*--------------------------------------------------------------
