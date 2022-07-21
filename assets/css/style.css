@@ -646,6 +646,11 @@ Skills_2
 .resume .resume-item ul {
   padding-left: 20px;
 }
+
+.resume .resume-item a {
+  color: #9010e6;
+}
+
 .resume .resume-item ul li {
   padding-bottom: 10px;
 }
